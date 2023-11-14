@@ -1,0 +1,40 @@
+body {
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.colum {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+}
+
+#aside {
+    background-color: rgb(183, 128, 235);
+    flex: 1;
+}
+
+#col1 {
+    background-color: rgb(55, 55, 116);
+    flex: 2;
+
+}
+
+#col2 {
+    background-color: rgb(160, 97, 97);
+    flex: 1;
+
+}
+h2 {
+    padding: 5px 15px;
+}
+
