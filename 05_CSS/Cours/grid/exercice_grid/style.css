@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 42px;
+}
+
+.row {
+    width: 100%
+}
+
+.container {
+    display: grid;
+    grid-template-columns:1fr 2fr 1fr;
+    height: 600px;
+}
+
+#pink {
+    background-color: rgb(233, 196, 202);
+}
+#blue {
+    background-color: rgb(94, 94, 151);
+}
+#orange{
+    background-color: rgb(220, 172, 81);
+}
+
+.footer {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 42px;
+    color: white;
+}
+
+
+
