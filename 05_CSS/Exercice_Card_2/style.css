@@ -3,8 +3,7 @@ body {
     margin: 0;
 }
 header {
-    background-color: #f2e2c6;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    background-color: #ffcbcb;
 }
 .container {
     display:flex;
@@ -15,8 +14,8 @@ header {
 
 
     & img {
-        width: 150px;
-        
+        width: 100px;
+        background-color: orange;
         border-radius: 50%;
     }
     & h1 {
@@ -38,7 +37,7 @@ header {
                 text-decoration: none;
                 padding: 8px;
                 color: white;
-                background-color: #e1d2b8;
+                background-color: #407088;
                 margin: 15px;
                 border-radius: 20px;
             }
@@ -47,52 +46,29 @@ header {
         }
     }
 }
-h2, h3 {
-    padding: 2px 12px;
-}
 .card {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 1000px;
+    height: 800px;
     
 
     & .content {
-        border: 1px solid rgb(246, 242, 242);
-        border-radius: 10px;
+        border: 1px solid #132742;
         margin: 20px;
         width: 300px;
-        box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-        background-color: rgb(241, 233, 233);
-        transition: transform 0.3s ease;
-    }
-    & .content:hover{
-        transform: scale(1.1);
-        
     }
 
     & .bgcard {
-        
+        background-color: pink;
         height: 100px;
-        & img {
-            height: auto;
-            position: absolute;
-            border-radius: 2px;
-            
-        }
-        
     }
 
     & h4 {
         text-align: center;
-        font-family: 'Caveat', cursive;
-        font-size: 20px;
     }
     & p {
-        padding: 30px 10px 0px 10px;
-        font-family: 'Caveat', cursive;
-        font-size: 20px;
-        
+        padding: 0px 10px 0px 10px;
     }
 }
 
@@ -132,5 +108,3 @@ footer {
         
     }
 }
-
-
