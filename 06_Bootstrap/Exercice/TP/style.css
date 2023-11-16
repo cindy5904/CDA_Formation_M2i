@@ -17,3 +17,7 @@ li .nav-item .dropdown::marker{
 #icone {
     list-style: none;
 }
+
+#taillepolice {
+    font-size: 14px;
+}
