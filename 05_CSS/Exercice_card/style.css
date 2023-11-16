@@ -53,6 +53,9 @@ header {
 
             
         }
+    & #openBtn {
+        display: none;
+    }    
     }
 }
 h2, h3 {
@@ -145,27 +148,23 @@ footer {
 @media screen and (max-width: 600px) {
     .container {
         justify-content: center;
-       & img {
-        display: none;
+       & image {
+        width: 10px;
        } 
     }
     ul {
         flex-direction: column;
-        
         & li {
             padding: 1px;
-
             & a {
     
                 display: block;
                 margin: 0;
             }
-        }    
-
+        }
     }
     .content {
-        width: 500px;
-        
+        width: 500px;  
     }
     footer {
         margin-bottom: 0;
