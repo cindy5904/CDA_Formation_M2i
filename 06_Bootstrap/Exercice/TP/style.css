@@ -1,0 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #f8f9fa;
+}
+
+.nav-link {
+    color: #f8f9fa;
+}
+
+li .nav-item .dropdown::marker{
+    list-style: none;
+}
+
+#icone {
+    list-style: none;
+}
