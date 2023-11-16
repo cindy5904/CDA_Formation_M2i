@@ -42,7 +42,13 @@ header {
                 padding: 8px;
                 color: white;
                 margin: 15px;
+                transition: transform 0.3s ease;
+
                 
+            }
+            & a:hover {
+                opacity: 1;
+                transform: scale(1.05);
             }
 
             
