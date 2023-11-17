@@ -25,7 +25,7 @@
                     <a class="nav-link" href="#">Educatifs</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Educatifs</a>
+                    <a class="nav-link" href="auteur.html">Auteurs</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Romans</a>
@@ -58,50 +58,49 @@
           </nav>
           <div class="container my-5">
             <div class="card border-1 bg-dark mx-auto w-50 p-4">
-                <form action="">                   
+                <form action="" class="">                   
                     <h1 class="text-light">-Inscription-</h1>
                     <div class="border-bottom text-light p-2 mb-2"></div>
-                        <div class="form-group row py-2">
-                            <label for="prenom" class="text-light col-sm-2 col-lg-3 col-form-label">Prénom : </label>
-                            <div class="col-sm-10 col-lg-9">
-                                <input type="text" readonly class="form-control bg-light" id="" value="John" placeholder="John">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 p-0">
+                            <label class="text-light" for="email">Email :</label>
+                            <input type="text" class="form-control" id="email" placeholder="Jane Doe">
+                        </div>
+                        <div class="col-lg-1 p-0">
+                            <div class="input-group">
+                                <label for="">flg</label>
+                                <div class="input-group-text pe-4 text-center bg-secondary">@</div>
                             </div>
                         </div>
-                        <div class="form-group row py-2">
-                            <label for="nom" class="text-light col-sm-2 col-lg-3 col-form-label">Nom : </label>
-                            <div class="col-sm-10 col-lg-9">
-                                <input type="text" readonly class="form-control bg-light" id="" value="Martin" placeholder="Martin">
-                            </div>
+                        <div class="col-lg-4 p-0">
+                            <label for="">email</label>
+                            <input type="text" class="form-control mr-3" id="" placeholder="Username">
                         </div>
-                        <div class="form-group row py-2">
-                            <label for="email" class="text-light col-sm-2 col-form-label col-lg-3">Adresse mail : </label>
-                            <div class="col-sm-10 col-lg-9">
-                                <input type="text" readonly class="form-control bg-light" id="" value="john.martin@exemple.com" placeholder="John">
-                            </div>
+                        <div class="col-lg-2 p-0">
+                            <label for="">email</label>
+                            <select class="form-control">
+                                <option>.com</option>
+                                <option>.fr</option>
+                            </select>
                         </div>
-                        <div class="form-group row py-2">
-                            <label for="pseudo" class="text-light col-sm-2 col-lg-3 col-form-label" id="taillepolice">Pseudonyme : </label>
-                            <div class="col-sm-10 col-lg-9">
-                                <input type="text" readonly class="form-control bg-light" id="" value="John@123" placeholder="John">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group-text pe-4 text-center bg-secondary"><i class="bi bi-eyeglasses"></i></div>
+                            <label for="">Mot</label>
+                            <div>
+                                <input type="text" placeholder="1234567....">
                             </div>
-                        </div>
-                        <div class="form-group row py-2">
-                            <label for="motdepasse" class="text-light col-sm-2 col-form-label col-lg-3">Mot de passe : </label>
-                            <div class="col-sm-10 col-lg-9">
-                                <input type="text" readonly class="form-control bg-light" id="" value="******" placeholder="John">
-                            </div>
-                        </div>
-                        <div class="form-group row py-2">
-                            <label for="confirmation" class="text-light col-sm-2 col-lg-3 col-form-label">Confirmation : </label>
-                            <div class="col-sm-10 col-lg-9">
-                                <input type="text" readonly class="form-control bg-light" id="" value="******" placeholder="John">
-                            </div>
-                        </div>
-                        <div class="border-bottom text-light p-2 mb-2"></div>
-                        <div class="d-flex justify-content-end pt-2">
-                            <button class="btn btn-outline-light px-2"><i class="bi bi-cloud-arrow-up me-2"></i>Envoyer</button>
+                            
 
                         </div>
+                    </div>
+
+                    <div class="border-bottom text-light p-2 mb-2"></div>
+                    
+                    <div class="d-flex justify-content-end pt-2">
+                        <button class="btn btn-outline-light px-2"><i class="bi bi-cloud-arrow-up me-2"></i>Envoyer</button>
+                    </div>
                 </form>
               </div>
           </div>

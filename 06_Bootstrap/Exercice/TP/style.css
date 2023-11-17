@@ -21,3 +21,8 @@ li .nav-item .dropdown::marker{
 #taillepolice {
     font-size: 14px;
 }
+
+#centre {
+    margin-top: auto;
+    margin-bottom: auto;
+}
