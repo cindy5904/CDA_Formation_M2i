@@ -4,7 +4,7 @@ rayon = Number(prompt('Veuillez saisir un rayon'));
 hauteur = Number(prompt ('Veuillez saisir une hauteur'));
 // pi = 3.14;
 
-volume = (Math.PI * rayon**2 * hauteur) / 3;
+volume = (Math.PI * rayon**2 * hauteur) / 3 .toFixed(2);
 
 console.log(volume);
 

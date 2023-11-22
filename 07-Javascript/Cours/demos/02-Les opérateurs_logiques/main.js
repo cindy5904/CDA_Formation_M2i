@@ -71,3 +71,28 @@ console.log(nb1); // 11
 // lecture de la valeur puis => decrementation (preincrementation)
 console.log(nb1--); // 11
 console.log(nb1); // 10
+
+// OPÉRATEURS BOOLÉENS
+// Opérateurs de comparaisons
+
+// Égalité
+console.log(3 == var1);
+// Inégalité 
+console.log(var1 != 4);
+// Égalité stricte
+console.log( 3 === var1);
+// Inégalité stricte 
+console.log(var1 !== "3");
+// Supériorité stricte 
+console.log(var2 > var1);
+// Supériorité 
+console.log(var2 >= var1);
+// Infériorité stricte 
+console.log(var1 < var2);
+// Infériorité 
+console.log(var1 <= var2);
+
+// Opérateurs logiques
+
+// ET 
+console.log("Vrai ou faux", true && false);
