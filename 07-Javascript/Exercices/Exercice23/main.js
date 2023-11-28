@@ -78,8 +78,7 @@ function tailleTableau(tableau) {
     let n = (parseInt(prompt("Entrez un nombre de note à saisir")));
     
     for (let i = 0; i < tableau.length; i++) {
-        tableau.push(n);
-        
+        tableau.push(n);    
     }
     for (let j = 0; j < n ; j++) {
         do {
