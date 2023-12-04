@@ -1,0 +1,82 @@
+/* 
+Réaliser une application via HTML / CSS et Javascript permettant à un utilisateur d'ajouter, visualiser et supprimer des éléments (le type de données sera au choix).
+
+* Pour pouvoir ajouter un élément, un formulaire devra s'afficher dans notre page via un modal. 
+* Pour pouvoir visualiser les éléments, un tableau devra être présent dans la page HTML et contenir les éléments de données (formatés à loisir)
+* Pour pouvoir supprimer un élément de notre tableau, un bouton sera présent sur chacune des lignes du tableau et permettra ladite suppresion lors de son clic
+
+BONUS : Permettre également, via un modal / formulaire, la possibilité d'éditer les données de notre application. 
+BONUS Bis : Faire en sorte que l'élément choisi utilise une date obtenue à partir de l'objet `Date` dont on peut instancier un élément via `new Date()` */
+
+html, body {
+    margin: 0;
+  }
+
+.modal {
+    height: 100dvh;
+    width: 100dvw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .modal-content {
+    background-color: hsl(0, 0%, 95%);
+    height: 80%;
+    width: min(80%, 800px);
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    & .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & button {
+        border: none;
+        background-color: rgb(184, 184, 184);
+        padding: 2ch;
+        border-radius: 9999999px;
+
+        }
+    }
+    & .modal-body {
+        width: 50%;
+        margin: auto;
+    }
+}}
+
+.modal2 {
+    height: 100dvh;
+    width: 100dvw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .modal-content2 {
+    background-color: hsl(0, 0%, 95%);
+    height: 80%;
+    width: min(80%, 800px);
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    & .modal-header2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & button {
+        border: none;
+        background-color: rgb(184, 184, 184);
+        padding: 2ch;
+        border-radius: 9999999px;
+
+        }
+    }
+   
+}}
+
+

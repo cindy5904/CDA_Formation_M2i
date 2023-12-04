@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="my-modal"class="modal">
+            <div class="modal-content">
+              <div class="modal-header ">
+                
+                <h2>Ajouter un contact</h2>
+        
+                <button id="modal-btn-close">X</button>
+              </div>
+              <div class="modal-body">
+                <fieldset>
+                    <form action="#" id="person-form">
+                        <div>
+                          <label for="nom">Nom: </label>
+                          <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div>
+                          <label for="prenom">Prénom : </label>
+                          <input type="text" id="prenom" name="prenom" required>
+                        </div>
+                        <div>
+                          <label for="age">Age: </label>
+                          <input type="text" id="age" name="age" required>
+                        </div>
+                        <div>
+                          <button id="submit-btn">Envoyer</button>
+                        </div>
+                      </form>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <button id="btn-show-modal">Ajouter Contact</button>
+          <ul id="mon-ul"></ul>
+          <table>
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-result"></tbody>
+          </table>
+          <hr />
+          <div id="my-modal2"class="modal2">
+            <div class="modal-content2">
+              <div class="modal-header2 ">
+                
+                <h2>Modifier</h2>
+        
+                <button id="modal-btn-close2">X</button>
+              </div>
+              <div class="modal-body2">
+                <fieldset>
+                    <form action="#" id="person-modify-form">
+                        <div>
+                            <label for="nom-modify">Nom: </label>
+                            <input type="text" id="nom-modify" name="nom-modify" required>
+                        </div>
+                        <div>
+                            <label for="prenom-modify">Prénom : </label>
+                            <input type="text" id="prenom-modify" name="prenom-modify" required>
+                        </div>
+                        <div>
+                            <label for="age-modify">Age: </label>
+                            <input type="text" id="age-modify" name="age-modify" required>
+                        </div>
+                        <div>
+                          <button id="submit-modify-btn">Modifier</button>
+                        </div>
+                      </form>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <button id="btn-show-modal2">modifier Contact</button>
+    </main>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
