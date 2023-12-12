@@ -175,7 +175,7 @@ console.log(data.name);
 <style scoped>
 </style> -->
 
-<script setup>
+<!-- <script setup>
 import { ref, watchEffect } from 'vue';
 
 const numberOfPokemons = 12;
@@ -232,4 +232,22 @@ img {
   height: auto;
   border-radius: 4px;
 }
+</style> -->
+<script setup>
+import TodoList from './components/TodoList.vue';
+</script>
+
+<template>
+  
+
+<div>
+<h1>Saisir des tâches : </h1>
+<TodoList/>
+</div>
+
+
+</template>
+
+<style scoped>
+
 </style>
