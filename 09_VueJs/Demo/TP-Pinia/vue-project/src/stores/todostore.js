@@ -18,6 +18,9 @@ export const useTodoStore = defineStore('todos', ()=> {
     todo.isFavorite = !todo.isFavorite;
   }
 
+
+
+
 return {todos, todoForId, addTodo, removeTodo, toggleFavorite}
 
 })
