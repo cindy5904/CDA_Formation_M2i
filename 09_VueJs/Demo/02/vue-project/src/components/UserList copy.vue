@@ -15,11 +15,9 @@ const removeUser = index => {
 }
 
 const updateUser = (index) => {
-  const newUser = prompt('Entrer votre nom')
-  const newUse1 = prompt('Entrer votre email')
-  
-  
-  users.value.splice(index, 1, {text: newUser});
+  const newUser = prompt('Entrer votre nom', users.value[index].name)
+  const newUser1 = prompt('Entrer votre email', users.value[index].email)
+  users.value.splice(index, 1, {name : newUser, email : newUser1});
   console.log(newUser);
 }
 </script>
