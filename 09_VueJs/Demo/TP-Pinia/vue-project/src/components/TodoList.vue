@@ -1,5 +1,4 @@
 <script setup>
-import { ref, onMounted } from 'vue';
 import AddTodo from './AddTodo.vue';
 import TodoItem from './TodoItem.vue';
 import { useTodoStore } from '../stores/todostore';

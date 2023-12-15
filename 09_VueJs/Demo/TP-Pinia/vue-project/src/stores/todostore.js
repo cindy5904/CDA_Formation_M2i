@@ -18,21 +18,6 @@ export const useTodoStore = defineStore('todos', ()=> {
     todo.isFavorite = !todo.isFavorite;
   }
 
-  // const filteredTodos = computed(() => {
-  //   if (currentFilter.value === 'all') {
-  //     return todos;
-  //   } else if (currentFilter.value === 'favorites') {
-  //     return todos.filter((todo) => todo.isFavorite);
-  //   }
-    
-  //   return todos;
-  // });
-
-  // function setFilter(filter) {
-  //   currentFilter.value = filter;
-  // }
-
-
 return {todos, todoForId, addTodo, removeTodo, toggleFavorite}
 
 })
