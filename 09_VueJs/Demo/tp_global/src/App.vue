@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <li><RouterLink to="/personnages" id="color">Personnages</RouterLink></li>
       <li><RouterLink to="/login" id="color">Connexion</RouterLink></li>
       <li><RouterLink to="/register" id="color">Inscription</RouterLink></li>
-      <li><RouterLink to="/"><img src="./assets/log2.png" alt="logo logout" width="80" height="50"></RouterLink></li>
+      <li><RouterLink to="/login" id="no-pad"><img src="./assets/log2.png" alt="logo logout" width="80" height="50" class="img-log"></RouterLink></li>
     </ul>
    
   </div>
@@ -53,5 +53,14 @@ li {
 #color {
   color: white;
   font-family: 'Roboto', sans-serif;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.img-log {
+  margin-top: 4px;
+  margin-left: -30px;
 }
 </style>
