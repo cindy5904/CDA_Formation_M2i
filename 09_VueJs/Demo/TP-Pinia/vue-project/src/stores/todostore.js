@@ -4,7 +4,7 @@ import {defineStore} from 'pinia'
 export const useTodoStore = defineStore('todos', ()=> {
   
   const todos = reactive([]);
-  
+  const currentFilter = ref('all');
   const todoForId = computed((todoId)=> todos.find(t => t.id === todoId));
 
   function addTodo(todo){
@@ -17,11 +17,6 @@ export const useTodoStore = defineStore('todos', ()=> {
   function toggleFavorite(todo) {
     todo.isFavorite = !todo.isFavorite;
   }
-
-
-
-
-return {todos, todoForId, addTodo, removeTodo, toggleFavorite}
+  return { todos, todoForId, addTodo, removeTodo, toggleFavorite };
 
 })
-
