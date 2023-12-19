@@ -39,7 +39,7 @@ const onLogin = async () => {
 <style scoped>
 
 h1{
-    background: linear-gradient(to right, #00ccff, #00ff99); /* Dégradé de couleurs vert-bleu */
+    background: linear-gradient(to right, #00ccff, #00ff99); 
     -webkit-background-clip: text;
     color: transparent; 
     margin: 80px;
@@ -102,7 +102,7 @@ input:focus {
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   color: #FFFFFF;
-  background: linear-gradient(to right, #00ccff, #00ff99); /* Utilisez le même dégradé que votre h1 */
+  background: linear-gradient(to right, #00ccff, #00ff99); 
   border-radius: 22px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
