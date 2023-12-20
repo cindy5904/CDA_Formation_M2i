@@ -34,7 +34,11 @@ export const useAuthStore = defineStore("auth", () => {
     const logout = () => {
       user.value = null;
       localStorage.removeItem("user");
+      
+         router.push('/'); 
+      
     };
+
   
     return { user, isLoggedIn, login, register, logout };
   });

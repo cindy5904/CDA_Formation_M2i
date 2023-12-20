@@ -1,6 +1,14 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { useAuthStore } from './stores/auth';
 
+const authStore = useAuthStore();
+const logout = () => {
+
+  authStore.logout();
+  
+   
+}
 </script>
 
 <template>
@@ -8,11 +16,16 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="nav">
     <ul class="nav-home">
       <img src="./assets/mortyLogo.png" alt="logo morty" width="80">
-      <li ><RouterLink to="/personnages" id="color">Accueil</RouterLink></li>
+      <li ><RouterLink to="/" id="color">Accueil</RouterLink></li>
       <li><RouterLink to="/personnages" id="color">Personnages</RouterLink></li>
       <li><RouterLink to="/login" id="color">Connexion</RouterLink></li>
       <li><RouterLink to="/register" id="color">Inscription</RouterLink></li>
-      <li><RouterLink to="/login" id="no-pad"><img src="./assets/log2.png" alt="logo logout" width="80" height="50" class="img-log"></RouterLink></li>
+      <li v-if="authStore.isLoggedIn">
+          <img src="./assets/user.png" alt="Avatar" width="50">
+        </li>
+        <li v-if="authStore.isLoggedIn" @click="logout" id="no-pad">
+          <img src="./assets/log2.png" alt="logo logout" width="80" height="50" class="img-log">
+        </li>    
     </ul>
    
   </div>
