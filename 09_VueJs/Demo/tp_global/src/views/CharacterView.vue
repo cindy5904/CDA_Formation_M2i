@@ -2,6 +2,7 @@
 import { useCharacterStore } from '../stores/character';
 import { computed, onMounted, ref } from 'vue';
 import Modal from '../components/Modal.vue'
+import InputSearch  from '../components/InputSearch.vue'
 
 const characterStore = useCharacterStore();
 const isModalOpen = ref(false);
@@ -29,6 +30,7 @@ onMounted(fetchCharacter);
 </script>
 
 <template>
+  <InputSearch/>
   <div>
     <div>
       <Modal v-if="characterStore.selectedCharacter" :selectedCharacter="characterStore.selectedCharacter"  @close="closeModal" />
@@ -61,14 +63,14 @@ onMounted(fetchCharacter);
   gap: 20px;
   margin: auto;
   padding-top: 10px;
-  width: 1200px;
+  
 }
 .character-card {
   border: 1px solid rgb(130, 236, 124);
   border-radius: 10px;
   margin: 20px;
   padding: 8px;
-  width: 200px;
+  width: 230px;
   height: 300px;
   box-shadow: 0 0px 20px rgb(130, 236, 124);
   /* background-color: rgb(241, 233, 233); */
