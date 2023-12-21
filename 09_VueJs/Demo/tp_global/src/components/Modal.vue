@@ -8,8 +8,10 @@ const props = defineProps(['selectedCharacter']);
 const isModalOpen = ref(true);
 
 
+const emit  = defineEmits();
+
 function closeModal() {
-  isModalOpen.value = false;
+  emit('close');
 }
 </script>
 

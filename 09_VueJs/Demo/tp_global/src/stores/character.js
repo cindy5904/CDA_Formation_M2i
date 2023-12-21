@@ -7,7 +7,7 @@ export const useCharacterStore = defineStore('character', () => {
   const pageInfo = ref({});
   const currentPage = ref(1);
   let selectedCharacter = ref();
-  const isModalOpen = ref(false);
+  
   let filteredCharacters = [];
   const getCharacterById = computed(() => (characterId) => {
     return characters.value.find(character => character.id === characterId);
@@ -34,6 +34,6 @@ export const useCharacterStore = defineStore('character', () => {
   };
 
   
-  return { characters, getCharacterById, pageInfo, currentPage, fetchCharacters, selectedCharacter, isModalOpen, filterCharacters, filteredCharacters  };
+  return { characters, getCharacterById, pageInfo, currentPage, fetchCharacters, selectedCharacter, filterCharacters, filteredCharacters  };
 });
 
