@@ -5,8 +5,9 @@ import Modal from '../components/Modal.vue'
 import InputSearch  from '../components/InputSearch.vue'
 
 const characterStore = useCharacterStore();
-const isModalOpen = ref(false);
+// const isModalOpen = ref(false);
 
+const isModalOpen = computed(() => characterStore.isModalOpen);
 const characters = computed(() => characterStore.characters);
 const currentPage = computed(() => characterStore.currentPage);
 
@@ -21,8 +22,11 @@ function changePage(page) {
   characterStore.isModalOpen = true;
 }
 
+// function closeModal() {
+//   isModalOpen.value = true;
+// }
 function closeModal() {
-  isModalOpen.value = true;
+  characterStore.isModalOpen = false;
 }
 
 onMounted(fetchCharacter);

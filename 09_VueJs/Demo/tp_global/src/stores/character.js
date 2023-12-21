@@ -7,6 +7,7 @@ export const useCharacterStore = defineStore('character', () => {
   const pageInfo = ref({});
   const currentPage = ref(1);
   let selectedCharacter = ref();
+  const isModalOpen = ref(false);
   
   const getCharacterById = computed(() => (characterId) => {
     return characters.value.find(character => character.id === characterId);
@@ -19,9 +20,8 @@ export const useCharacterStore = defineStore('character', () => {
       currentPage.value = page;
     } catch (error) {
       console.error('Erreur lors de la récupération des données:', error);
-    }
+    } 
   }
- 
-  return { characters, getCharacterById, pageInfo, currentPage, fetchCharacters, selectedCharacter };
+  return { characters, getCharacterById, pageInfo, currentPage, fetchCharacters, selectedCharacter, isModalOpen, filterCharacters, filteredCharacters  };
 });
 
