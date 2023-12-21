@@ -18,8 +18,8 @@ const logout = () => {
       <img src="./assets/mortyLogo.png" alt="logo morty" width="80">
       <li ><RouterLink to="/" id="color">Accueil</RouterLink></li>
       <li><RouterLink to="/personnages" id="color">Personnages</RouterLink></li>
-      <li><RouterLink to="/login" id="color">Connexion</RouterLink></li>
-      <li><RouterLink to="/register" id="color">Inscription</RouterLink></li>
+      <li v-if="!authStore.isLoggedIn"><RouterLink to="/login" id="color">Connexion</RouterLink></li>
+      <li v-if="!authStore.isLoggedIn"><RouterLink to="/register" id="color">Inscription</RouterLink></li>
       <li v-if="authStore.isLoggedIn">
           <img src="./assets/user.png" alt="Avatar" width="50">
         </li>
