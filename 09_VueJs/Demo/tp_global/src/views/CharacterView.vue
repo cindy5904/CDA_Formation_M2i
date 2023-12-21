@@ -26,7 +26,9 @@ function changePage(page) {
 //   isModalOpen.value = true;
 // }
 function closeModal() {
-  characterStore.isModalOpen = false;
+  characterStore.isModalOpen = !characterStore.isModalOpen;
+  characterStore.selectedCharacter = '';
+
 }
 
 onMounted(fetchCharacter);

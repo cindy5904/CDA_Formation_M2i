@@ -9,18 +9,23 @@ const toggleForm = () => {
   isFormVisible.value = !isFormVisible.value;
 };
 
-// Définir les filtres en tant que tableau simple
 const filters = [{"id":1,"name":"status","subFilters":["Alive","unknown","Dead"]},{"id":2,"name":"species","subFilters":["Human","Alien","Humanoid","unknown","Poopybutthole","Mythological Creature","Animal","Robot","Cronenberg","Disease"]},{"id":3,"name":"type","subFilters":["Genetic experiment","Superhuman (Ghost trains summoner)","Parasite","Human with antennae","Human with ants in his eyes","Fish-Person","Cromulon","Self-aware arm","Cat-Person","Human with baby legs","Bepisian","Hivemind","Mytholog","Human with giant head","Dog","Bird-Person","Korblock","Boobloosian","Elephant-Person","Superhuman","Gromflomite","Centaur","Organic gun","Microverse inhabitant","Vampire","Light bulb-Alien","Animal","Robot-Crocodile hybrid","Zigerion","Giant","Cone-nippled alien","Demon","Shapeshifter","Game","Amoeba-Person","Cronenberg","Clone","Robot","Interdimensional gaseous being","Flansian","Zombodian","Garblovian","Gazorpian","Eat shiter-Person","Goddess","Gazorpian reproduction robot","Hammerhead-Person","Hole","Tuskfish","Alphabetrian","Cat","Time God","Unknown-nippled alien","Krootabulan","Plutonian","Jellybean","Tentacle alien","Miniverse inhabitant","Cyborg","Larva alien","Snail alien","Tinymouth","Lizard-Person","Alligator-Person","Monster","Conjoined twin","Sentient ant colony","Human Gazorpian","Boobie buyer reptilian","Meeseeks","The Devil","Cat controlled dead lady","Numbericon","Octopus-Person","Hairy alien","Pickle","Bread","Mega Gargantuan","Rat","Gear-Person","Blue ape alien","Ring-nippled alien","Lobster-Alien","Scrotian","Shimshamian","Omniscient being","Slug","Stair goblin","Leprechaun","Morty's toxic side","Rick's toxic side","Traflorkian","Teenyverse inhabitant","Trunk-Person","Tumblorkian","Chair","Drumbloxian","Floop Floopian","Greebybobe","Corn-person","Phone-Person","Teddy Bear","Little Human","Mexican","Giant Cat Monster","Old Amazons","Mannie","Necrophiliac","Eel","Pizza","Grandma","Phone","Doopidoo","Pripudlian","Nano Alien","Human with a flower in his head","Hologram","Shrimp","Caterpillar","Wasp","Toy","Monogatron","Lizard","Fly","God","Dummy","Human with tusks","Gramuflackian","Dragon","Snake","Human-Snake hybrid","Soulless Puppet","Half Soulless Puppet","Glorzo","Planet","Zeus","Clay-Person","Sexy Aquaman","Narnian","Starfish","Squid","Decoy","Whenwolf","Summon","Morglutzian","Weasel","Super Sperm Monster","CHUD","Giant Incest Baby","CHUD Human Mix","Changeformer","Artificial Intelligence","Guinea Pig for the Polio Vaccine","Turkey","Turkey Human Mix","Anime","Memory","Bird-Person Human Mix","Crow","Cookie","Normal Size Bug","Slartivartian","Ferkusian","Mascot","Scarecrow","Tiger","Crow Horse","Ferret Robot","Passing Butter Robot"]},{"id":4,"name":"gender","subFilters":["Male","Female","unknown","Genderless"]}]
 
-const selectedFilters = ref({});
-
-const applyFilters = () => {
-  // Appliquer les filtres au store
-  characterStore.filterCharacters(selectedFilters.value);
+const applyFilters = async (page) => {
+  await characterStore.filterCharacters(page, selectedFilters.value.name, selectedFilters.value.status, selectedFilters.value.species, selectedFilters.value.gender, selectedFilters.value.type);
+  
 };
+const selectedFilters = ref({
+  name: '',
+  status: '',
+  species: '',
+  type: '',
+  gender: '',
+});
+
 
 watch(() => isFormVisible.value, () => {
-  // Si le formulaire devient visible, appliquer les filtres
+  
   if (isFormVisible.value) {
     applyFilters();
   }
@@ -58,7 +63,6 @@ watch(() => isFormVisible.value, () => {
                 </div>
             </div>
         </div>
-
         <div class="section2">
             <div class="content">
                 <div class="label">
@@ -83,10 +87,9 @@ watch(() => isFormVisible.value, () => {
                 </div>
             </div>
         </div>
-        
-      </div>
-      <div class="btn-filtre">
-            <button type="button" @click.prevent="applyFilters">Submit</button>
+        </div>
+        <div class="btn-filtre">
+            <button type="button" @click.prevent="applyFilters(1)">Submit</button>
         </div>
     </form>
   </div>
@@ -155,7 +158,7 @@ img {
     outline: none;
 }
   .btn-filtre {
-    margin-top: auto; /* Push the button to the bottom */
+    margin-top: auto; 
   }
 
 </style>
