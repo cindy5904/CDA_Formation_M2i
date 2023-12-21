@@ -24,9 +24,9 @@ export const useCharacterStore = defineStore('character', () => {
     }
     
   }
-  const filterCharacters = async (page, name, status, species, gender) => {
+  const filterCharacters = async (page, name, status, species, gender, type) => {
     try {
-      const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}&name=${name}&status=${status}&species=${species}&gender=${gender}`);
+      const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}&name=${name}&status=${status}&species=${species}&gender=${gender}&type=${type}`);
       characters.value = response.data.results;
     } catch (error) {
       console.error('Erreur lors du filtrage des personnages :', error);

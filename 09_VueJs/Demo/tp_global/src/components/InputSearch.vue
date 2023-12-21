@@ -13,7 +13,6 @@ const filters = [{"id":1,"name":"status","subFilters":["Alive","unknown","Dead"]
 
 const applyFilters = async (page) => {
   await characterStore.filterCharacters(page, selectedFilters.value.name, selectedFilters.value.status, selectedFilters.value.species, selectedFilters.value.gender, selectedFilters.value.type);
-  
 };
 const selectedFilters = ref({
   name: '',
@@ -37,7 +36,7 @@ watch(() => isFormVisible.value, () => {
     <div class="img-filter" @click="toggleForm">
       <img src="../assets/filt.png" alt="icone filtre">
     </div>
-    <form action="" v-if="isFormVisible">
+    <form action="" v-if="isFormVisible" @click.prevent="applyFilters(1)">
       <input type="text" placeholder="Search by Name..." class="search-input">
       <div class="container-filtre">
         <div class="section1">
@@ -88,13 +87,9 @@ watch(() => isFormVisible.value, () => {
             </div>
         </div>
         </div>
-        <div class="btn-filtre">
-            <button type="button" @click.prevent="applyFilters(1)">Submit</button>
-        </div>
     </form>
   </div>
 </template>
-
 
 <style scoped>
 .container {
@@ -123,7 +118,6 @@ img {
     height: 150px;
     border-radius: 15px;
   }
-  
   .section1, .section2 {
     display: flex;
     flex-direction: column;
@@ -132,14 +126,11 @@ img {
     display: flex;
     margin-bottom: 15px;
   }
-
   .section1, .section2 label {
     margin-right: 15px; 
   }
-
   label {
     color: rgb(35, 90, 35);
-
   }
   .form-input {
     border: none;
@@ -157,8 +148,4 @@ img {
 .form-input:focus {
     outline: none;
 }
-  .btn-filtre {
-    margin-top: auto; 
-  }
-
 </style>
