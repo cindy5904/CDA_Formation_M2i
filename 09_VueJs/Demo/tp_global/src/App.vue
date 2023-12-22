@@ -97,6 +97,7 @@ footer {
   background-color: #0f1941;
   margin-top: 20px;
   margin-bottom: auto;
+  
 }
 .footer {
   display: flex;

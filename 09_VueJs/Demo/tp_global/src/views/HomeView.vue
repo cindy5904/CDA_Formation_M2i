@@ -9,20 +9,34 @@ const authStore = useAuthStore();
   <main>
     <div class="nolog" v-if="!authStore.isLoggedIn">
       <div class="home-title">
-        <h1>Ceci est la page d'accueil</h1>
+        <h1>Rick et Morty</h1>
+      </div>
+      <div class="para-home">
+        <p class="descriHome">Découvrez l'univers déjanté de "Rick et Morty" ! Suivez les aventures interdimensionnelles du scientifique excentrique Rick Sanchez et de son petit-fils Morty. Rencontrez des personnages loufoques, plongez dans des réalités alternatives et savourez l'humour unique de cette série animée. Explorez des épisodes hilarants mêlant satire et folie, et laissez-vous emporter par cette expérience captivante. Bienvenue dans le monde fou de "Rick et Morty" !</p>
+      </div>
+      <div class="home-title">
         <h2>Vous devez être connecter pour voir notre contenue</h2>
-        <h3>Voulez-vous vous</h3>
       </div>
       <div class="gif">
         <img src="../assets/gif.gif" alt="flèche" />
       </div>
       <div class="home-btn">
         <button>
-          <RouterLink to="/login" id="color">Connecter</RouterLink>
+          <RouterLink to="/login" id="color">Connexion</RouterLink>
         </button>
         <button>
-          <RouterLink to="/register" id="color">Inscrire</RouterLink>
+          <RouterLink to="/register" id="color">Inscription</RouterLink>
         </button>
+      </div>
+
+      <div class="mortynolog">
+        <img src="../assets/mortynolog.png" alt="" class="mortyimgnolog">
+      </div>
+      <div class="ricknolog">
+        <img src="../assets/ricknolog.png" alt="" class="rickimgnolog">
+      </div>
+      <div>
+        <img src="../assets/blnolog.png" alt="" class="blnolog">
       </div>
     </div>
     <!-- <div>
@@ -51,6 +65,9 @@ const authStore = useAuthStore();
 </template>
 
 <style scoped>
+.nolog {
+  margin-bottom: 175px;
+}
 .home-title {
   display: flex;
   flex-direction: column;
@@ -66,9 +83,17 @@ h1 {
   color: transparent;
   
 }
+.para-home{
+  margin: 30px auto 0 auto;
+  width: 50%;
+  z-index: 1;
+}
+.descriHome{
+  color: white;
+  text-align: justify;
+}
 .home-title,
-h2,
-h3 {
+h2 {
   color: white;
 }
 .gif {
@@ -88,16 +113,36 @@ button {
   border: none;
   border-radius: 15px;
   padding: 10px 15px 10px 15px;
-  background-color: #00ff99;
+  background-color: #3168ab;
 }
 #color {
   color: white;
   font-size: 25px;
 }
 button:hover {
-  background-color: rgb(9, 34, 9);
+  background-color: rgb(20, 26, 78);
   color: white;
 }
+.mortyimgnolog{
+  position: absolute;
+  top:60%;
+  left: 10px;
+  width: 350px;
+}
+.rickimgnolog{
+  position: absolute;
+  top:42%;
+  left: 15%;
+  width: 230px;
+}
+
+.blnolog {
+  position: absolute;
+  width: 270px;
+  right: 10%;
+  top :40%;
+}
+
 h4 {
   font-family: "fancy horror", sans-serif;
   background: linear-gradient(to right, #40abc6, #35e66a);
