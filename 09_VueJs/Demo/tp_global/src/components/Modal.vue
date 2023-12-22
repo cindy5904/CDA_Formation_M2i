@@ -52,7 +52,7 @@ function closeModal() {
 
 <style scoped>
 .modal {
-    background-color: #fff;
+    background-color: #e9e8ea;
     width: 600px;
     height: 300px;
     border-radius: 10px;
@@ -63,13 +63,13 @@ function closeModal() {
 button {
     margin-left: 560px;
     border: none;
-    background-color: #fff;
+    background-color: #e9e8ea;
     font-size: 26px; 
 }
 
 h3 {
     margin-top: -5px;
-    color: rgb(87, 163, 87);
+    color: rgb(215, 129, 215);
     font-size: 26px;
 }
 .content {
@@ -89,7 +89,7 @@ h3 {
     border-radius: 15px;
 }
 .span-color {
-    color: green;
+    color: #cb88ac;
 }
 .span-marg {
     margin-left: 5px;

@@ -55,12 +55,12 @@ onMounted(fetchCharacter);
           <h3 class="character-name">{{ character.name }}</h3>
           <div class="character-species">
             <span class="color-character">Species: </span>
-            <span> {{ character.species }}</span>
+            <span class="text-character"> {{ character.species }}</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="pagination">
+    <!-- <div class="pagination">
       <button
         @click="changePage(currentPage - 1)"
         :disabled="currentPage <= 1"
@@ -75,7 +75,24 @@ onMounted(fetchCharacter);
       >
         Suivant
       </button>
-    </div>
+    </div> -->
+    <div class="pagination">
+    <button
+      @click="changePage(currentPage - 1)"
+      :disabled="currentPage <= 1"
+      class="btn-pagination"
+    >
+      ←
+    </button>
+    <span class="pageactuelle">{{ currentPage }}</span>
+    <button
+      @click="changePage(currentPage + 1)"
+      :disabled="currentPage >= 42"
+      class="btn-pagination"
+    >
+      →
+    </button>
+  </div>
   </div>
 </template>
 
@@ -90,16 +107,17 @@ onMounted(fetchCharacter);
   padding-top: 10px;
 }
 .character-card {
-  border: 1px solid rgb(130, 236, 124);
+  border: 1px solid rgb(108, 202, 217);
   border-radius: 10px;
   margin: 20px;
   padding: 8px;
   width: 230px;
-  height: 300px;
-  box-shadow: 0 0px 20px rgb(130, 236, 124);
+  height: 350px;
+  box-shadow: 0 0px 20px rgb(96, 171, 222);
   /* background-color: rgb(241, 233, 233); */
-  background-color: rgb(56, 107, 56);
+  background-color: #3f6472;
   transition: transform 0.3s ease;
+  font-family: 'Preahvihear', sans-serif;
 }
 .character-card:hover {
   transform: scale(1.1);
@@ -115,15 +133,18 @@ onMounted(fetchCharacter);
   margin: 12px;
 }
 .color-character {
-  color: rgb(162, 214, 162);
+  color: #cb88ac;
   margin-left: 12px;
   font-size: 16px;
+}
+.text-character{
+  color: white;
 }
 h3 {
   text-align: center;
   font-weight: bold;
   font-family: "roboto", sans-serif;
-  color: rgb(43, 239, 43);
+  color: rgb(158, 173, 185);
   margin-top: -8px;
 }
 .pagination {
@@ -136,7 +157,7 @@ h3 {
 
 .btn-pagination {
   padding: 5px 15px 5px 15px;
-  background-color: rgb(14, 127, 14);
+  background-color: rgb(88, 99, 142);
   color: white;
   border-radius: 12px;
 }
@@ -145,5 +166,8 @@ h3 {
   margin-top: -10px;
   text-align: center;
   margin-left: -18px;
+}
+.pageactuelle {
+  color: white;
 }
 </style>

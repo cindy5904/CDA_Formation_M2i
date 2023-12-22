@@ -15,7 +15,7 @@ const logout = () => {
   <header class="header">
     <div class="nav">
     <ul class="nav-home">
-      <img src="./assets/mortyLogo.png" alt="logo morty" width="80">
+      <img src="./assets/logonav.png" alt="logo morty" width="80">
       <li ><RouterLink to="/" id="color">Accueil</RouterLink></li>
       <li><RouterLink to="/personnages" id="color">Personnages</RouterLink></li>
       <li v-if="!authStore.isLoggedIn"><RouterLink to="/login" id="color">Connexion</RouterLink></li>
@@ -35,7 +35,7 @@ const logout = () => {
 <footer>
   <div class="footer">
       <div class="img-foot">
-        <img src="./assets/logo.jpg" alt="logo" width="40px">
+        <img src="./assets/logoCindy.png" alt="logo" width="40px">
       </div>
       <div class="logo">
         <div class="logo-git">
@@ -61,12 +61,13 @@ const logout = () => {
   height: 80px;
 }
 .nav {
-  background-color: rgb(6, 71, 6);
+  background-color: #0f1941;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(144, 238, 144, 0.5); 
+  box-shadow: 0 0 10px #83a1fc; 
+  
 }
 .nav-home {
   display: flex;
@@ -86,14 +87,14 @@ li {
 }
 #color {
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Preahvihear', sans-serif;
 }
 
 .no-pad {
   padding: 0;
 }
 footer {
-  background-color: rgb(6, 71, 6);
+  background-color: #0f1941;
   margin-top: 20px;
   margin-bottom: auto;
 }
