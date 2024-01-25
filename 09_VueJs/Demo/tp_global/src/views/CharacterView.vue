@@ -103,7 +103,7 @@ onMounted(fetchCharacter);
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  margin: auto;
+  margin: 15px 15px;
   padding-top: 10px;
 }
 .character-card {

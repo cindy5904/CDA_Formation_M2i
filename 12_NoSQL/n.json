@@ -1,0 +1,23 @@
+{
+    "_id": {
+      "$oid": "65a64c16938cf30257df7f1c"
+    },
+    "age": 77,
+    "name": "Chuck Norris",
+    "gender": "male",
+    "email": "chuck@retrack.com",
+    "phone": "+1 (856) 451-3888",
+    "address": {
+      "number": 160,
+      "street": "Ainslie Street",
+      "city": "Summerset",
+      "state": "Delaware",
+      "postal": 9546
+    },
+    "favoriteFruit": "apple",
+    "hobbies": [
+      "karaté",
+      "kung fu",
+      "rulling the world"
+    ]
+  }

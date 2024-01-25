@@ -91,6 +91,7 @@ h1 {
 .descriHome{
   color: white;
   text-align: justify;
+  font-family: 'Preahvihear', sans-serif;
 }
 .home-title,
 h2 {
@@ -232,5 +233,63 @@ h4 {
   width: 400px;
   position: absolute;
   left: 70%;
+}
+@media only screen and (max-width: 800px) {
+  h4 {
+    font-size: 40px;
+    padding-top: 35px;
+  }
+
+  #video-container {
+    width: 80%;
+    height: 300px;
+  }
+  #video-background {
+    width: 300px;
+  }
+  .description {
+    width: 80%;
+    font-size: 14px;
+    
+  }
+
+  .img-morty {
+    width: 80px;
+    left: 12%;
+    top: 2%;
+  }
+
+  .img-rick {
+    width: 100px;
+    left: 80%;
+    top: 1%;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h4 {
+    font-size: 30px;
+  }
+
+  #video-container {
+    height: 200px;
+  }
+
+  .description {
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .img-morty {
+    width: 150%px;
+    left: 1%;
+  }
+
+  .img-rick {
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 </style>

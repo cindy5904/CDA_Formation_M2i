@@ -1,0 +1,16 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Ceci est un projet test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello": "node hello.js",
+    "start": "nodemon app.js"
+  },
+  "author": "Benoit Lecoeuvre",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
