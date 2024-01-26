@@ -1,0 +1,11 @@
+doctype html
+html(lang ='fr')
+  head
+    title Liste des Livres
+    link(rel='stylesheet', href='./style.css')
+  body
+    h1 Liste des Livres
+    div
+        ul
+        each livre in livres
+            li= livre.titre + ' par ' + livre.auteur

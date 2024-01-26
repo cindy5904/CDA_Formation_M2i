@@ -5,13 +5,22 @@ const fs = require('fs');
 
 const livresPath = path.join('Data', 'livres.json');
 
-router.get('/', (req, res) => {  
+// router.get('/', (req, res) => {  
+//     fs.readFile(livresPath, 'utf8', (err, data) => {
+//         if (err) throw err; console.log(data);
+//         const livres = JSON.parse(data);
+//         // res.json(livres);
+//         res.render('index', {title: 'Homepage'})
+//     });
+// });
+router.get('/', (req, res) => {
     fs.readFile(livresPath, 'utf8', (err, data) => {
-        if (err) throw err; console.log(data);
+        if (err) throw err;
         const livres = JSON.parse(data);
-        res.json(livres);
+        res.render('index', { title: 'Homepage', livres: livres });
     });
 });
+
 
 router.get('/:id', (req, res) => {
     fs.readFile(livresPath, 'utf8', (err, data) => {

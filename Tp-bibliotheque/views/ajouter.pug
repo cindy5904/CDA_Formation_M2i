@@ -1,0 +1,20 @@
+doctype html
+html(lang ='fr')
+  head
+    title Ajouter un livre
+  body
+    h1 Ajouter un livre 
+    form(action="/ajouter", method="POST")
+        label(for="titre") Titre:
+        input(type="text", name="titre", required)
+
+        label(for="auteur") Auteur:
+        input(type="text", name="auteur", required)
+
+        label(for="annee_publication") Année de publication:
+        input(type="number", name="annee_publication", required)
+
+        label(for="disponible") Disponible:
+        input(type="checkbox", name="disponible")
+
+    button(type="submit") Ajouter Livre

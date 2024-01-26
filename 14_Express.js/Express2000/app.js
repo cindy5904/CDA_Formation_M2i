@@ -1,7 +1,22 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const PORT = process.env.PORT || 3000;
 const bookRoutes = require('./Routes/bookRoutes');
+// connexion à mysql
+const connection = require('./config/db');
+// connexion à mongoose
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/Express2000');
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'erreur de connexion à Mongodb'))
+db.once('open', () => {
+    console.log('connexion à mongoDB');
+})
+
+app.set('view engine', 'pug')
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
 app.use('/livres', bookRoutes);
