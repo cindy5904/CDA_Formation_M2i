@@ -21,7 +21,7 @@ const livreController = {
   },
 
   updateLivre: (req, res) => {
-    console.log('Fonction updateLivre appelée');
+    console.log('update fonctionne');
     const livreId = req.params.id;
     const livreData = req.body;
     Livre.updateLivre(livreId, livreData, (err, result) => {
