@@ -14,16 +14,19 @@ class Livre {
     }
   
     static updateLivre(livreId, livreData, callback) {
-      const { titre, auteur, annee_publication, disponible } = livreData;
-      const sql = 'UPDATE livres SET titre=?, auteur=?, annee_publication=?, disponible=? WHERE id=?';
-      const values = [titre, auteur, annee_publication, disponible, livreId];
+      const { titre } = livreData;
+      const sql = ('UPDATE livres SET ? WHERE id=?', [{titre : titre}, livreId]);
   
-      connection.query(sql, values, callback);
+      connection.query(sql, [{ titre: titre }, livreId], callback);
+
     }
   
-    // static deleteLivre(livreId, callback) {
-    //   connection.query('DELETE FROM livres WHERE id= ?', livreId, callback);
-    // }
+    static deleteLivre(livreId, callback) {
+      const sql = ('DELETE FROM livres WHERE id = ?', [livreId]);
+      
+  
+      connection.query(sql, callback);
+    }
   }
 
 module.exports = Livre;

@@ -21,21 +21,30 @@ const livreController = {
   },
 
   updateLivre: (req, res) => {
+    console.log('Fonction updateLivre appelée');
     const livreId = req.params.id;
     const livreData = req.body;
     Livre.updateLivre(livreId, livreData, (err, result) => {
-      if (err) throw err;
-      res.send('Livre mis à jour avec succès');
+      if (err) {
+        console.error(err); 
+        res.status(500).send('Erreur lors de l\'Update du livre.');
+      } else {
+        res.send('Livre mis à jour avec succès');
+      }
     })
   },
-
+  
   deleteLivre: (req, res) => {
     const livreId = req.params.id;
     Livre.deleteLivre(livreId, (err, result) => {
-      if (err) throw err;
-      res.send('Livre supprimé avec succès');
+      if (err) {
+        console.error(err); 
+        res.status(500).send('Erreur lors du delete du livre.');
+      } else {
+        res.send('Livre supprimé avec succès');
+      }
+      
     });
   },
 }
-
 module.exports = livreController;
