@@ -3,7 +3,10 @@ const router = express.Router();
 const movieController = require('../controllers/movieController');
 
 
-router.get('/', movieController.createMovie);
+router.get('/ajout', movieController.createMovie);
+router.get('/', movieController.getAllMovies);
+router.get('/search/:title', movieController.searchMovieByTitle);
+
 
 
 
