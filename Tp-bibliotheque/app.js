@@ -1,11 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
 const livreRoutes = require('./routes/livreRoutes')
 const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
-
+app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use('/livres', livreRoutes)
 

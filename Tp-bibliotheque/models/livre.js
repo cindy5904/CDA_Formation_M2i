@@ -15,17 +15,15 @@ class Livre {
   
     static updateLivre(livreId, livreData, callback) {
       const { titre } = livreData;
-      const sql = ('UPDATE livres SET ? WHERE id=?', [{titre : titre}, livreId]);
-  
-      connection.query(sql, [{ titre: titre }, livreId], callback);
-
+      const sql = 'UPDATE livres SET titre = ? WHERE id = ?';
+    
+      connection.query(sql, [titre, livreId], callback);
     }
+    
   
     static deleteLivre(livreId, callback) {
-      const sql = ('DELETE FROM livres WHERE id = ?', [livreId]);
-      
-  
-      connection.query(sql, callback);
+      const sql = 'DELETE FROM livres WHERE id = ?';
+      connection.query(sql, [livreId], callback);
     }
   }
 

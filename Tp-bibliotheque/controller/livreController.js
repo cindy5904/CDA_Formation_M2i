@@ -38,13 +38,14 @@ const livreController = {
     const livreId = req.params.id;
     Livre.deleteLivre(livreId, (err, result) => {
       if (err) {
-        console.error(err); 
+        console.error(err);
         res.status(500).send('Erreur lors du delete du livre.');
       } else {
+        console.log('Livre supprimé avec succès');
         res.send('Livre supprimé avec succès');
       }
-      
     });
-  },
+  }
+  
 }
 module.exports = livreController;
