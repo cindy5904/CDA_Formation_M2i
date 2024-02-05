@@ -16,7 +16,7 @@ db.once("open", () => {
   console.log("Connecté à mongoDB");
 });
 
-app.use('/user', userRoutes); 
+app.use(userRoutes); 
 app.listen(port, () => {
     console.log(`http://localhost:${port}`);
   });
