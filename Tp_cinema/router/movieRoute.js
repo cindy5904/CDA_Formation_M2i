@@ -7,7 +7,4 @@ router.get('/ajout', movieController.createMovie);
 router.get('/', movieController.getAllMovies);
 router.get('/search/:title', movieController.searchMovieByTitle);
 
-
-
-
 module.exports = router;
