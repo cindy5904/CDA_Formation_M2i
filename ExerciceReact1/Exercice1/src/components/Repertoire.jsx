@@ -1,5 +1,6 @@
 import React from 'react';
 import Contact from './Contact';
+import { contacts } from '../data'
 
 const Repertoire = () => {
     return ( 
@@ -11,7 +12,15 @@ const Repertoire = () => {
                         <th>Téléphone</th>
                     </tr>
                 </thead>
-                <Contact/>
+                <tbody>
+                {contacts.map(contact => ( 
+                    <Contact
+                        key={contact.id}
+                        
+                        nom ={contact.nom} prenom={contact.prenom} numeroTel={contact.numeroTel} />
+                    
+        ))}
+                </tbody>
             </table>
      );
 }
