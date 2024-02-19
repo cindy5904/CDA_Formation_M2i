@@ -3,7 +3,7 @@ export const contacts = [
         id: 1,
         nom: 'Doe',
         prenom: 'John',
-        numeroTel: '01124545j'
+        numeroTel: '0112454510'
       },
       {
         id: 2,
@@ -15,7 +15,7 @@ export const contacts = [
         id: 3,
         nom: 'Scott',
         prenom: 'David',
-        numeroTel: '542759712'
+        numeroTel: '5427597712'
       },
 ]
 

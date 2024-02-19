@@ -4,7 +4,7 @@ import { contacts } from '../data'
 
 const Repertoire = () => {
     return ( 
-        <table>
+        <table className="table table-dark">
                 <thead>
                     <tr>
                         <th>Nom</th>
