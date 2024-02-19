@@ -1,21 +1,4 @@
-<!-- <script setup>
-import { ref } from 'vue';
-import { useAuthStore } from '../stores/auth';
-import { useRouter } from 'vue-router';
 
-const authStore = useAuthStore();
-const router = useRouter();
-const username = ref('');
-const password = ref('');
-
-const onLogin = async () => {
-  await authStore.login({ username: username.value, password: password.value });
-  
-  if (authStore.isLoggedIn) {
-    router.push('/personnages');
-  }
-};
-</script> -->
 <script setup>
 import { ref } from 'vue';
 import { useAuthStore } from '../stores/auth';
@@ -36,7 +19,7 @@ const onLogin = async () => {
         emailError.value = '';
     }
 
-    // Ajoutez d'autres validations si nécessaire
+    
 
     await authStore.login({ username: username.value, password: password.value });
 
@@ -48,22 +31,7 @@ const onLogin = async () => {
 
 
 <template>
-  <!-- <div class="container">
-    <div class="card-login">
-        <h1>Connexion</h1>
-        <form @submit.prevent="onLogin" class="login-form">
-        <div class="card-email">
-            <label for="username">Email : </label>
-            <input v-model="username" type="text" id="username"/>
-        </div>
-        <div class="card-password">
-            <label for="password">Mot de passe : </label>
-            <input v-model="password" type="password" id="password"/>
-        </div>
-        <button type="submit" class="button-card" @click="onLogin">Se connecter</button>
-        </form>
-     </div>
-  </div> -->
+  
   <div class="container">
     <div class="card-login">
         <h1>Connexion</h1>
