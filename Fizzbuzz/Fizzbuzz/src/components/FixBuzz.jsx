@@ -27,8 +27,8 @@ const FixBuzz = () => {
             <h1>FizzBuzz</h1>
             <p>{condition(count)}</p>
             <p>{count}</p>
-            <button onClick={Increment}>Incrément</button>
-            <button onClick={Decrement}>Décrément</button>
+            <button onClick={Increment} disabled= {count >=40}>Incrément</button>
+            <button onClick={Decrement} disabled= {count <=0}>Décrément</button>
         </div>
      );
 }
