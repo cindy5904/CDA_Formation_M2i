@@ -23,13 +23,13 @@ const Updatetodo = () => {
     }).catch(error => console.error(error))
 }, [])
 
-  const handleUpdateTodo = (id) => {
-    
+  const handleUpdateTodo = () => {
+    console.log(id); 
     axios.put(`http://localhost:3000/todolist/${id}`, formData)
       .then(response => {
         console.log(response.data);
         
-        navigate(`/task/${id}`);
+        
       })
       .catch(error => console.error(error));
   }
@@ -39,7 +39,7 @@ const Updatetodo = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
-    navigate(`/`)
+    // navigate(`/`)
   }
 
   return (
