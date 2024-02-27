@@ -45,7 +45,7 @@ function App() {
               <p className="card-text"><strong>Due Date: </strong> {todolist.due_date}</p>
               <div className='btn'>
               <button onClick={() => deletetodolist(todolist.id)}>Supprimer</button>
-              <Link to={`/updatetodo/${id}`}>Modifier</Link>
+              <Link to={`/updatetodo/${todolist.id}`}>Modifier</Link>
               </div>
             </div>
           ))}
