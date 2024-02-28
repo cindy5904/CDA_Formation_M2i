@@ -28,10 +28,10 @@ const Updatetodo = () => {
     axios.put(`http://localhost:3000/todolist/${id}`, formData)
       .then(response => {
         console.log(response.data);
-        
-        
+          
       })
       .catch(error => console.error(error));
+    navigate('/'); 
   }
 
   const handleChange = (e) => {
@@ -39,8 +39,9 @@ const Updatetodo = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
-    // navigate(`/`)
+    
   }
+  
 
   return (
     <div>
