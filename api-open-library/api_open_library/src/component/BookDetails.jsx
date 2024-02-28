@@ -29,13 +29,13 @@ const BookDetails = () => {
         <div className="container-detail">
             <div className="card_detail">
                 <div className="img">
-                {/* <img src={`https://covers.openlibrary.org/b/id/${bookDetails?.covers[0]}-L.jpg`} alt={bookDetails.title} />                */}
+                <img src={`https://covers.openlibrary.org/b/id/${bookDetails?.covers[0]}-L.jpg`} alt={bookDetails.title} />               
                 </div>
                 <div className="content_detail">
-                    {/* <h1>{bookDetails?.title}</h1> */}
+                    <h1>{bookDetails?.title}</h1>
                     {/* <p>Auteur: {bookDetails?.authors ? bookDetails.authors[0].name : 'N/A'}</p> */}
-                    <p>Date de publication: {bookDetails?.first_publish_date ? bookDetails.publish_date : 'N/A'}</p>
-                    {/* <p>Description: {bookDetails.description ? bookDetails.description.value : 'N/A'}</p> */}
+                    <p>Date de publication: {bookDetails?.first_publish_date ? bookDetails.first_publish_date : 'N/A'}</p>
+                    <p>Description: {bookDetails?.description ? bookDetails.description : 'N/A'}</p>
                 </div>
             </div>
         </div>
