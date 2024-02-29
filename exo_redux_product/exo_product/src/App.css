@@ -1,0 +1,125 @@
+
+h1 {
+  text-align: center;
+  
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.container-item {
+  padding: 30px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 200px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.price {
+  margin-top: 45px;
+  color: rgb(71, 13, 105);
+  text-align: center;
+}
+.btn {
+  display: flex;
+  gap:30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.btn button {
+  border: none;
+  padding: 7px 15px 7px 15px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.modify {
+  background-color: rgb(27, 74, 90);
+  
+}
+
+.delete {
+  background-color: rgb(27, 74, 90);
+}
+#priceStrong {
+  color: black;
+}
+
+.inputName, .inputPrice {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.valide {
+  background-color: rgb(157, 206, 157);
+}
+
+.annule {
+  background-color: rgb(195, 100, 100);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 110px auto 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  height: 400px;
+  padding-top: 25px;
+  
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 30px auto 10px auto;
+}
+
+input {
+  border-color: rgb(247, 242, 242);
+  border-top: rgb(247, 242, 242);
+  border-left: rgb(247, 242, 242);
+  margin-top: 10px;
+  padding: 5px;
+
+}
+input:focus {
+  outline: none;
+  border-color: lightgrey;
+}
+.btnForm {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  margin: 45px auto 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(27, 74, 90);
+  padding: 5px 15px 5px 15px;
+  color: #fff;
+  border: none;
+}
